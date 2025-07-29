@@ -1,269 +1,404 @@
-{% load static%}
-<!DOCTYPE html>
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portf </title>
-    <link rel="icon" type="image/x-icon" href="./Images/favicon.jpeg">
-    <link rel="stylesheet" href="{%static 'css/style.css'%}">
-    
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kartik Sharma - Portfolio</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/favicon.jpeg' %}"
+    />
 
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-</head>
-<body>`
-    
-    <!-- Navbar Section -->
-    <nav id="navbar" class="flex s-around bg-color">
-        <div class="left-nav">
-            <h2 class="t-white">PORTFOLIO</h2>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Devicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">PORTFOLIO</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home"
+                >Home <i class="fa-solid fa-house"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about"
+                >About <i class="fa-solid fa-user"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills"
+                >Skills <i class="fa-solid fa-code"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience"
+                >Experience <i class="fa-solid fa-briefcase"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects"
+                >Projects <i class="fas fa-project-diagram"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"
+                >Contact <i class="fa-solid fa-message"></i
+              ></a>
+            </li>
+          </ul>
         </div>
-        <div class="right-nav">
-            <ul class="flex">
-                <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
-                <li><a href="#skills" class="t-white roboto">My Skills <i class="fa-solid fa-code"></i></a></li>
-                <li><a href="#experience" class="t-white roboto">My Experiences <i class="fa-solid fa-briefcase"></i></a></li>
-                <li><a href="#Projects" class="t-white roboto">My Projects <i class="fas fa-project-diagram"></i></a></li>
-                <li><a href="#Contact" class="t-white roboto">Contact <i class="fa-solid fa-message"></i></a></li>
-                
-            </ul>
-        </div>
+      </div>
     </nav>
 
-        
-
     <!-- Home Section -->
-    <section id="home" class="flex s-around sw-80 m-auto">
-        <div class="home-left flex items-center">
-            <div class="home-content">
-                <h6 class="poppinss">Hi, I am</h6>
-                <h1 class="t-white">Kartik Sharma</h1>
-                <h4 class="poppinss" style="white-space: nowrap;font-size: 40px;">a Software Engineer</h4>
-                <a href="https://drive.google.com/drive/folders/1WMzOzFhaNCj3LwteNXgOjh4xj2te185v?usp=drive_link"  target="_blank">
-                    <button class="btn poppins">My Resume</button></a>
-                    
-                <!-- <a class="btn live poppins" id="hireme" href=""
-                    target="_blank">Let's Talk</a> -->
+    <section id="home" class="d-flex align-items-center min-vh-100">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+            <h6 class="text-info fs-5">Hi, I am</h6>
+            <h1 class="text-white display-3 fw-bold">Kartik Sharma</h1>
+            <h4 class="text-info mb-4 fs-3">a Software Engineer</h4>
+            <a
+              href="https://drive.google.com/drive/folders/1WMzOzFhaNCj3LwteNXgOjh4xj2te185v?usp=drive_link"
+              target="_blank"
+              class="btn btn-outline-light btn-lg me-2"
+              >My Resume</a
+            >
+          </div>
+          <div class="col-lg-6 text-center">
+            <div class="profile-container mx-auto">
+              <img
+                src="{% static 'images/ks.jpg' %}"
+                alt="Profile"
+                class="img-fluid profile-img rounded-circle w-50"
+              />
             </div>
+          </div>
         </div>
-        <div class="home-right flex s-center items-center">
-            <div class="circle flex s-center items-center" id="mainImage">
-               
-                <img src="{% static 'images/me.jpg'%}" alt="Image" style="width: 300px; border-radius: 50%;">
-            </div>
-
-        </div>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <h1 class="t-center my-2 t-white f-2" style="color: yellow;">ABOUT ME</h1>
-<div class="about-container flex s-around items-center">
-            <div class=" about-left flex s-center items-center">
-                <!-- Here in src replade the given link with your secondary image link -->
-                <img src="{%static 'images/dog.png'%}" alt="" style="width: 60%;">
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="text-center text-warning mb-5 display-4">ABOUT ME</h2>
+        <div class="row align-items-center">
+          <div class="col-md-5 text-center mb-5 mb-md-0">
+            <div class="about-image-container mx-auto">
+              <img
+                src="{% static 'images/dog.png' %}"
+                alt="About"
+                class="img-fluid about-img"
+              />
             </div>
-
-            <div class="about-right flex">
-                <div class="about-content">
-                    <h1 class="t-white m-b-1 poppins">My name is Kartik Sharma. I am a B.Tech in Computer Science graduate from Pune, India.
-                        
-                        
-                        I am a fresher and I am passionate about creating quality web applications that meet all of the customers needs, and I love learning new techniques and technologies that allow me to make that happen.</h1>
-                      <!-- <a class="btn " id="hireme"
-                        href="">Hire Me</a> -->
-                </div>
+          </div>
+          <div class="col-md-7">
+            <div class="about-content bg-dark p-4 rounded">
+              <p class="text-white lead mb-0">
+                My name is Kartik Sharma. I am a B.Tech in Computer Science
+                graduate from Pune, India. I am a fresher passionate about
+                creating quality web applications that meet all customer needs.
+                I love learning new techniques and technologies that allow me to
+                make that happen.
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
-    <!-- Skills Section -->
-<section id="skills">
-  <h1 class="t-center my-2 t-white f-2" style="color: yellow;">MY SKILLS</h1>
-  <div class="skills-container flex s-around items-center">
-
-    <!-- Left side image -->
-    <div class="skills-left flex s-center items-center">
-      <img src="{% static 'images/pro.png' %}" alt="Skills" class="skills-img">
-    </div>
-
-    <!-- Right side icons -->
-    <div class="skills-right grid-icons">
-      <div class="skills-right">
-        <i class="fab fa-python fa-3x" style="color:#43f203;"></i>
-        <span class="poppins t-white">Python</span>
-      </div>
-      <div class="skills-right">
-        <i class="fab fa-js-square fa-3x" style="color:#F7DF1E;"></i>
-        <span class="poppins t-white">JavaScript</span>
-      </div>
-      <div class="skills-right">
-        <i class="fab fa-react fa-3x" style="color:#61DBFB;"></i>
-        <span class="poppins t-white">React</span>
-      </div>
-      <div class="skills-right">
-        <i class="devicon-django-plain fa-3x" style="color:#28a745;"></i>
-        <span class="poppins t-white">Django</span>
-      </div>
-      <div class="skills-right">
-        <i class="fas fa-database fa-3x" style="color:#4DB33D;"></i>
-        <span class="poppins t-white">SQL</span>
-      </div>
-      <div class="skills-right">
-        <i class="fab fa-html5 fa-3x" style="color:#E34F26;"></i>
-        <span class="poppins t-white">HTML</span>
-      </div>
-      <div class="skills-right">
-        <i class="fab fa-css3-alt fa-3x" style="color:#1572B6;"></i>
-        <span class="poppins t-white">CSS</span>
-      </div>
-      <div class="skills-right">
-        <i class="fas fa-cloud fa-3x" style="color:#00A4EF;"></i>
-        <span class="poppins t-white">Cloud</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- Experience Section -->
-<!-- Experience Section -->
-<!-- Experience Section -->
-<!-- Experience Section -->
-<!-- Experience Section -->
-<section id="experience">
-    <h1 class="t-center my-2 t-white f-2" style="color: yellow;">MY EXPERIENCES</h1>
-    <div class="projects-container flex s-center">
-
-        <!-- Experience 1 -->
-        <div class="projects-item flex f-col s-center items-center">
-            <h2 class="t-white poppins" style="margin-bottom: 10px;">Full Stack Developer Intern</h2>
-            <h3 class="t-white poppins" style="margin-bottom: 10px;">ITView - Pune, India</h3>
-            <p class="t-white poppins" style="margin-bottom: 10px;"><strong>Duration:</strong> Jan 2025 – Present</p>
-            <p class="t-white poppins" style="text-align: center;">Designed and developed interactive web applications using RestAPIs, Python Django framework for backend handling, React.js with HTML5 and CSS3 Bootstrap for great looking frontend user interface and MySQL database for data storage.</p>
+    <section id="skills" class="py-5 bg-dark">
+      <div class="container">
+        <h2 class="text-center text-warning mb-5 display-4">MY SKILLS</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-5 text-center mb-5 mb-lg-0">
+            <img
+              src="{% static 'images/pro.png' %}"
+              alt="Skills"
+              class="img-fluid rounded skill-image"
+            />
+          </div>
+          <div class="col-lg-7">
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+              <!-- Skill Items -->
+              <div class="col text-center">
+                <i class="fab fa-python fa-3x text-success mb-2"></i>
+                <p class="text-white">Python</p>
+              </div>
+              <div class="col text-center">
+                <i class="fab fa-js-square fa-3x text-warning mb-2"></i>
+                <p class="text-white">JavaScript</p>
+              </div>
+              <div class="col text-center">
+                <i class="fab fa-react fa-3x text-info mb-2"></i>
+                <p class="text-white">React</p>
+              </div>
+              <div class="col text-center">
+                <i class="devicon-django-plain fa-3x text-success mb-2"></i>
+                <p class="text-white">Django</p>
+              </div>
+              <div class="col text-center">
+                <i class="fas fa-database fa-3x text-primary mb-2"></i>
+                <p class="text-white">SQL</p>
+              </div>
+              <div class="col text-center">
+                <i class="fab fa-html5 fa-3x text-danger mb-2"></i>
+                <p class="text-white">HTML</p>
+              </div>
+              <div class="col text-center">
+                <i class="fab fa-css3-alt fa-3x text-info mb-2"></i>
+                <p class="text-white">CSS</p>
+              </div>
+              <div class="col text-center">
+                <i class="fas fa-cloud fa-3x text-primary mb-2"></i>
+                <p class="text-white">Cloud</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Experience 2 -->
-        <div class="projects-item flex f-col s-center items-center">
-            <h2 class="t-white poppins" style="margin-bottom: 10px;">Software Engineer Intern</h2>
-            <h3 class="t-white poppins" style="margin-bottom: 10px;">Blackbird Australia - Remote</h3>
-            <p class="t-white poppins" style="margin-bottom: 10px;"><strong>Duration:</strong> Aug 2024 – Dec 2024</p>
-            <p class="t-white poppins" style="text-align: center;">Developed a comprehensive portfolio management system utilising Python FastAPI for backend, React.Js with Redux for responsive frontend components, PostgreSQL for optimised database operations handling 500+ daily users and maintained Git workflows for the backend team.</p>
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+      <div class="container">
+        <h2 class="text-center text-warning mb-5 display-4">MY EXPERIENCES</h2>
+        <div class="row g-4">
+          <!-- Experience Cards -->
+          <div class="col-md-4">
+            <div class="card h-100 bg-dark text-white">
+              <div class="card-body">
+                <h3 class="card-title">Full Stack Developer Intern</h3>
+                <h5 class="card-subtitle mb-3 text-info">
+                  ITView - Pune, India
+                </h5>
+                <p class="text-warning">
+                  <strong>Duration:</strong> Jan 2025 – Present
+                </p>
+                <p class="card-text">
+                  Designed and developed interactive web applications using
+                  RestAPIs, Python Django framework for backend handling,
+                  React.js with HTML5 and CSS3 Bootstrap for frontend and MySQL
+                  database.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 bg-dark text-white">
+              <div class="card-body">
+                <h3 class="card-title">Software Engineer Intern</h3>
+                <h5 class="card-subtitle mb-3 text-info">
+                  Blackbird Australia - Remote
+                </h5>
+                <p class="text-warning">
+                  <strong>Duration:</strong> Aug 2024 – Dec 2024
+                </p>
+                <p class="card-text">
+                  Developed portfolio management system using Python FastAPI,
+                  React.js with Redux, PostgreSQL handling 500+ daily users and
+                  maintained Git workflows for backend team.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 bg-dark text-white">
+              <div class="card-body">
+                <h3 class="card-title">AI & Cloud Intern</h3>
+                <h5 class="card-subtitle mb-3 text-info">IBM - Pune, India</h5>
+                <p class="text-warning">
+                  <strong>Duration:</strong> Feb 2024 – Apr 2024
+                </p>
+                <p class="card-text">
+                  Leveraged IBM Watson's AI tools with Python ML libraries
+                  (NumPy, Pandas, Scikit-learn) for project development with
+                  TensorFlow for 40% increase in project functionality.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Experience 3 -->
-        <div class="projects-item flex f-col s-center items-center">
-            <h2 class="t-white poppins" style="margin-bottom: 10px;">AI & Cloud Intern</h2>
-            <h3 class="t-white poppins" style="margin-bottom: 10px;">IBM - Pune, India</h3>
-            <p class="t-white poppins" style="margin-bottom: 10px;"><strong>Duration:</strong> February 2024 – April 2024</p>
-            <p class="t-white poppins" style="text-align: center;">Leveraged IBM Watson’s AI tools, including Watson Natural Language Understanding (NLU) and Watson Assistant, with Python machine learning libraries such as NumPy, Pandas, and Scikit-learn for project development with the help of Tensorflow as well for 40% increase in project functionality.</p>
-        </div>
-
-    </div>
-</section>
-
-
-
-
-
-
-    
+      </div>
+    </section>
 
     <!-- Projects Section -->
-    <section id="Projects">
-        <h1 class=" t-center my-2 t-white f-2" style="color: yellow;">MY PROJECTS</h1>
-        <div class="projects-container flex s-center">
-            <div class="projects-item flex f-col s-center items-center">
-               
-                <h1 class="t-white poppins">Fake News Catcher</h1>
-                <p class="t-white poppins"> This is a functional detection app intended to verify genuine news on the internet. The accuracy of this Machine learning project is upto 95%.</p>
-                <div class="buttons flex s-around">
-                    <a href=""
-                        target="_blanks" class="btn mx-1 m-top">GitHub</a>
-                    <!-- <a href="" target="_blanks" class="btn m-top live">Live
-                        Link</a> -->
-                </div>
+    <section id="projects" class="py-5 bg-dark">
+      <div class="container">
+        <h2 class="text-center text-warning mb-5 display-4">MY PROJECTS</h2>
+        <div class="row g-4">
+          <!-- Project Cards -->
+          <div class="col-md-6">
+            <div class="card h-100 bg-secondary text-white">
+              <div class="card-body">
+                <h3 class="card-title">Fake News Catcher</h3>
+                <p class="card-text">
+                  Functional detection app to verify genuine news on the
+                  internet. Machine learning project with 95% accuracy.
+                </p>
+              </div>
+              <div class="card-footer bg-transparent">
+                <a href="#" class="btn btn-outline-light">GitHub</a>
+              </div>
             </div>
-            <div class="projects-item flex f-col s-center items-center">
-               
-                <h1 class="t-white poppins">My Portfolio</h1>
-                <p class="t-white poppins">This is My portfolio website which is created with HTML,CSS and Javascript and Django which describes my skill and knowledge. My portfolio website showcases my work in a sleek and minimalist design, allowing the focus to be on the content itself.</p>
-                <div class="buttons flex s-around">
-                    <a href="https://github.com/Kartik2007sharma" target="_blanks"
-                        class="btn mx-1 m-top">GitHub</a>
-                    <!-- <a href="#" target="_blanks" class="btn m-top live">Live
-                        Link</a> -->
-                </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 bg-secondary text-white">
+              <div class="card-body">
+                <h3 class="card-title">My Portfolio</h3>
+                <p class="card-text">
+                  Portfolio website created with HTML, CSS, JavaScript and
+                  Django showcasing my skills and projects in a sleek minimalist
+                  design.
+                </p>
+              </div>
+              <div class="card-footer bg-transparent">
+                <a
+                  href="https://github.com/Kartik2007sharma"
+                  target="_blank"
+                  class="btn btn-outline-light"
+                  >GitHub</a
+                >
+              </div>
             </div>
-           
-         </div>
-
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Contact Me Section -->
-    <section id="Contact" class="m-b-1">
-        <h1 class=" t-center my-2 t-white f-2" style="color: yellow;">CONTACT ME</h1>
-        <div class="contact-container flex s-around items-centers">
-            <div class="form" id="contactForm">
-                <form method="post" > 
-                    {% csrf_token %}
-                    <div class="name form-div">
-                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name">
-                    </div>
-
-                    <div class="email form-div">
-                        <input type="email" name="email" id="" class="poppins" placeholder="Enter Your Email"
-                            required>
-                    </div>
-
-                    <div class="phone form-div">
-                        <input type="phone" name="number" id="" class="poppins" placeholder="Enter Your Phone"
-                            required>
-                    </div>
-                    
-                    <div class="textarea form-div">
-                        <textarea name="content" id="textarea" cols="30" rows="10" class="poppins"
-                            placeholder="Enter Messages"></textarea>
-                    </div>
-                    <button type="submit" class="btn poppins" id="submit">Send</button>
-                </form>
-            </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="text-center text-warning mb-5 display-4">CONTACT ME</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form method="post" class="bg-dark p-4 rounded">
+              {% csrf_token %}
+              <div class="mb-3">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control form-control-lg"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control form-control-lg"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="tel"
+                  name="number"
+                  class="form-control form-control-lg"
+                  placeholder="Your Phone"
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  name="content"
+                  class="form-control form-control-lg"
+                  rows="5"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-warning btn-lg w-100">
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer id="footer">
-        <ul class="flex s-center w-80 m-auto my-2 res">
-            <li><a href="#home" class="poppinss">Home</a></li>
-            <li><a href="#about" class="poppinss">About</a></li>
-            <li><a href="#skills" class="poppinss">Skills</a></li>
-            <li><a href="#projects" class="poppinss">Projects</a></li>
-            <li><a href="#portfolio" class="poppinss">Portfolio</a></li>
+    <!-- Footer -->
+    <footer class="py-4 bg-black">
+      <div class="container">
+        <ul class="nav justify-content-center mb-3">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#projects">Projects</a>
+          </li>
         </ul>
-        <ul class="flex s-center w-80 font-awesome ">
-            <a href="https://www.linkedin.com/in/kartik-sharma-41262b192/" target="_blank">
-                <li><i class="fa-brands fa-linkedin-in"></i></li>
-            </a>
-            <a href="https://github.com/Kartik2007sharma" target="_blank">
-                <li><i class="fa-brands fa-github"></i></li>
-            </a>
-            
-            
-        </ul>
-        <p class="t-center my-2 poppins">&copy; All Rights Reserved - <span class="cpy-white poppins">Kartik Sharma 
-                </span></p>
-
+        <div class="d-flex justify-content-center mb-3">
+          <a
+            href="https://www.linkedin.com/in/kartik-sharma-41262b192/"
+            target="_blank"
+            class="mx-3 fs-4 text-white"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/Kartik2007sharma"
+            target="_blank"
+            class="mx-3 fs-4 text-white"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <p class="text-center text-white mb-0">
+          &copy; 2025 Kartik Sharma. All Rights Reserved.
+        </p>
+      </div>
     </footer>
-     
-</body> 
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
