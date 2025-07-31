@@ -14,14 +14,15 @@ body {
 }
 
 body {
-  background-color: var(--primary-bg);
-  color: var(--text-light);
+  background-color: #000000;
+  color: #ffffff;
   font-family: "Ubuntu", sans-serif;
   padding-top: 70px;
 }
 
+
 .navbar {
-  background-color: rgba(31, 31, 56, 0.95) !important;
+  background-color: #000 !important;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -31,9 +32,11 @@ section {
 }
 
 #home {
-  background: linear-gradient(rgba(31, 31, 56, 0.9), rgba(44, 44, 108, 0.7));
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  z-index: 1;
+background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -41,8 +44,8 @@ section {
 
 .profile-container {
   position: relative;
-  max-width: 100%;
-  overflow: hidden;
+    z-index: 1;
+
 }
 
 .profile-img {
@@ -79,6 +82,7 @@ section {
 }
 
 .card {
+    background-color: #111111; /* Optional dark shade for cards */
   border: none;
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 15px;
@@ -235,3 +239,76 @@ section {
   margin-left: 0;
   margin-right: 0;
 }
+.card-img-top {
+  height: 200px;
+  object-fit: contain;
+  background-color: #222; /* fallback color */
+  padding: 1rem;
+}
+#tagCanvas {
+  background: transparent;
+  margin-top: 10px;
+}
+#home {
+  position: relative;
+  z-index: 1;
+  /* overflow: hidden; */
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
+  z-index: 1;
+}
+.social-icons a,
+.btn-outline-light {
+  position: relative;
+  z-index: 2;
+}
+
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+section {
+  background-color: transparent;
+}
+#about,
+#skills,
+#projects,
+#experience,
+#contact {
+  background-color: #0d0d0d !important;
+}
+.card,
+.about-content {
+  background-color: #111 !important;
+}
+
+.card-text,
+.card-title,
+.card-subtitle,
+p,
+li {
+  color: #fff;
+}
+section {
+  border-bottom: 1px solid #ff0707;
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+}
+
