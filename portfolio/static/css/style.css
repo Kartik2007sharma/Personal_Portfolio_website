@@ -1,8 +1,8 @@
 /* Custom Styles */
 :root {
-  --primary-bg: #1f1f38;
-  --secondary-bg: #2c2c6c;
-  --accent-color: #4db5ff;
+  --primary-bg: #e74c3c;
+  --secondary-bg: #f39c12;
+  --accent-color: #0047ab;
   --text-light: #ffffff;
 }
 
@@ -14,29 +14,37 @@ body {
 }
 
 body {
-  background-color: #000000;
+  background: linear-gradient(-45deg, #e74c3c, #f39c12, #0047ab, #f9f9f9);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   color: #ffffff;
   font-family: "Ubuntu", sans-serif;
   padding-top: 70px;
 }
 
-
 .navbar {
-  background-color: #000 !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 section {
   padding: 5rem 0;
+  background: linear-gradient(
+    -45deg,
+    #e74c3c,
+    #f39c12,
+    #0047ab,
+    #f9f9f9
+  ) !important;
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #home {
   position: relative;
   z-index: 1;
-background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -44,22 +52,17 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
 
 .profile-container {
   position: relative;
-    z-index: 1;
-
+  z-index: 1;
 }
 
 .profile-img {
   border-radius: 50%;
-  border: 5px solid rgba(77, 181, 255, 0.4);
+  border: 5px solid rgba(255, 255, 255, 0.4);
   padding: 10px;
   width: 100%;
   max-width: 300px;
   height: auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-#about {
-  background-color: var(--primary-bg);
 }
 
 .about-image-container {
@@ -75,14 +78,14 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
 }
 
 .about-content {
-  background-color: var(--secondary-bg);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 30px;
   border-radius: 15px;
   font-size: 1.1rem;
 }
 
 .card {
-    background-color: #111111; /* Optional dark shade for cards */
+  background-color: rgba(0, 0, 0, 0.4);
   border: none;
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 15px;
@@ -91,11 +94,7 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.bg-secondary {
-  background-color: var(--secondary-bg) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .btn-outline-light {
@@ -111,20 +110,19 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
 }
 
 .btn-warning {
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: #f39c12;
+  border-color: #f39c12;
   color: #212529;
   font-weight: 500;
   transition: all 0.3s;
 }
 
 .btn-warning:hover {
-  background-color: #e0a800;
-  border-color: #d39e00;
+  background-color: #d68a0a;
+  border-color: #d68a0a;
   transform: scale(1.05);
 }
 
-/* Skill icons animation */
 .fab,
 .devicon-django-plain,
 .fas {
@@ -137,12 +135,10 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
   transform: scale(1.2);
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
   .profile-img {
     max-width: 250px;
   }
-
   .about-img {
     max-width: 250px;
   }
@@ -152,39 +148,30 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
   section {
     padding: 3rem 0;
   }
-
   .display-3 {
     font-size: 2.5rem;
   }
-
   .display-4 {
     font-size: 2rem;
   }
-
   .profile-img {
     max-width: 220px;
   }
-
   .about-image-container {
     margin-bottom: 2rem;
   }
-
   .about-content {
     margin-top: 0;
     font-size: 1rem;
   }
-
-  /* Prevent horizontal scrolling on mobile */
   .container {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .row {
     margin-left: -8px;
     margin-right: -8px;
   }
-
   [class*="col-"] {
     padding-left: 8px;
     padding-right: 8px;
@@ -196,23 +183,18 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
-
   .display-3 {
     font-size: 2rem;
   }
-
   .profile-img {
     max-width: 200px;
   }
-
   .about-img {
     max-width: 200px;
   }
-
   #home .col-lg-6 {
     text-align: center !important;
   }
-
   #home .btn {
     margin-bottom: 1rem;
     display: block;
@@ -221,20 +203,16 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
     margin-left: auto;
     margin-right: auto;
   }
-
-  /* Adjust form padding */
   #contact .col-lg-8 {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 
-/* Force content to stay within viewport */
 .container {
   max-width: 100%;
   overflow: hidden;
 }
-
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -242,17 +220,13 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
 .card-img-top {
   height: 200px;
   object-fit: contain;
-  background-color: #222; /* fallback color */
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 1rem;
 }
+
 #tagCanvas {
   background: transparent;
   margin-top: 10px;
-}
-#home {
-  position: relative;
-  z-index: 1;
-  /* overflow: hidden; */
 }
 
 #home::before {
@@ -262,15 +236,15 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
 .social-icons a,
 .btn-outline-light {
   position: relative;
   z-index: 2;
 }
-
 
 @keyframes gradientBG {
   0% {
@@ -284,21 +258,6 @@ background: linear-gradient(-45deg, #000, #8b0000, #cd0606, #000);
   }
 }
 
-section {
-  background-color: transparent;
-}
-#about,
-#skills,
-#projects,
-#experience,
-#contact {
-  background-color: #0d0d0d !important;
-}
-.card,
-.about-content {
-  background-color: #111 !important;
-}
-
 .card-text,
 .card-title,
 .card-subtitle,
@@ -306,9 +265,15 @@ p,
 li {
   color: #fff;
 }
-section {
-  border-bottom: 1px solid #ff0707;
-  padding-bottom: 1px;
-  margin-bottom: 1px;
+.custom-intro {
+  color: black;
+}
+
+.custom-name {
+  color: red; /* bright red from your gradient theme */
+}
+
+.custom-role {
+  color: black;
 }
 
